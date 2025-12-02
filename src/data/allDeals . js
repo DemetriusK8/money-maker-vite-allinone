@@ -1,85 +1,106 @@
 // src/data/allDeals.js
 
-// AMAZON DEALS
-export const amazonDeals = [
-  {
-    title: 'Amazon Gadgets',
-    desc: 'Hot tech & gadgets from Amazon — great for affiliate commissions.',
-    url: 'https://www.amazon.com/?tag=YOUR_AMAZON_TAG'
-  },
-  {
-    title: 'Home Essentials',
-    desc: 'Popular home products perfect for Amazon affiliate links.',
-    url: 'https://www.amazon.com/?tag=YOUR_AMAZON_TAG'
-  }
-];
-
-// CLICKBANK OFFERS
+// ==========================
+// CLICKBANK HIGH-TICKET DEALS
+// ==========================
 export const clickbankDeals = [
   {
-    title: 'ClickBank Fitness Offer',
-    desc: 'High-ticket fitness & weight-loss funnel with strong conversions.',
-    url: 'https://YOUR_CLICKBANK_HOPLINK'
+    title: 'ProVen Weight Loss Offer',
+    desc: 'Top trending ClickBank fitness offer with high payout.',
+    url: 'https://hop.clickbank.net/?affiliate=YOURID&vendor=proven&pid=frontpage'
   },
   {
-    title: 'Digital Marketing Course',
-    desc: 'Evergreen make-money-online product with great commissions.',
-    url: 'https://YOUR_CLICKBANK_HOPLINK'
+    title: '12 Minute Affiliate System',
+    desc: 'High converting make-money-online system for beginners.',
+    url: 'https://hop.clickbank.net/?affiliate=YOURID&vendor=12min&pid=funnelfront'
   }
 ];
 
-// FIVERR OFFERS
-export const fiverrDeals = [
-  {
-    title: 'Logo Designer Referral',
-    desc: 'Earn commissions referring people to Fiverr logo designers.',
-    url: 'https://YOUR_FIVERR_AFFILIATE_LINK'
-  },
-  {
-    title: 'Freelance Web Developer',
-    desc: 'Refer clients to freelancers and earn per signup.',
-    url: 'https://YOUR_FIVERR_AFFILIATE_LINK'
-  }
-];
 
-// CPA NETWORK OFFERS
+// ==========================
+// CPAGRIP — EASY CONVERSION DEALS
+// ==========================
 export const cpaOffers = [
   {
-    title: 'CPA Survey Offer',
-    desc: 'Simple email-submit offer from your CPA network.',
-    url: 'https://YOUR_CPA_LINK'
+    title: 'Win a $1000 Walmart Gift Card',
+    desc: 'Simple email submit CPA offer — very high conversions.',
+    url: 'https://www.cpagrip.com/show.php?offer=12345'
   },
   {
-    title: 'Finance Trial',
-    desc: 'High-payout finance CPA offer — great commissions.',
-    url: 'https://YOUR_CPA_LINK'
+    title: 'Get a Free iPhone 15 Trial',
+    desc: 'Top performing sweepstakes CPA offer.',
+    url: 'https://www.cpagrip.com/show.php?offer=67890'
   }
 ];
 
-// ETSY AFFILIATE DEALS
+
+// ==========================
+// FIVERR AFFILIATE DEALS
+// ==========================
+export const fiverrDeals = [
+  {
+    title: 'Hire a Logo Designer',
+    desc: 'Perfect for new brands — Fiverr freelance logo designers.',
+    url: 'https://go.fiverr.com/visit/?bta=00000&brand=fiverrcpa'
+  },
+  {
+    title: 'Hire a Website Developer',
+    desc: 'Popular Fiverr gig for entrepreneurs and small businesses.',
+    url: 'https://go.fiverr.com/visit/?bta=00000&brand=fiverrcpa'
+  }
+];
+
+
+// ==========================
+// AMAZON STARTER DEALS
+// ==========================
+export const amazonDeals = [
+  {
+    title: 'Top Amazon Tech Gadgets',
+    desc: 'Trending gadgets and accessories on Amazon.',
+    url: 'https://www.amazon.com/s?k=tech+gadgets'
+  },
+  {
+    title: 'Amazon Home Essentials',
+    desc: 'Popular home products with strong sales.',
+    url: 'https://www.amazon.com/s?k=home+essentials'
+  }
+];
+
+
+// ==========================
+// ETSY TRENDING DEALS
+// ==========================
 export const etsyDeals = [
   {
-    title: 'Etsy Trending Gifts',
-    desc: 'Handmade trending items from Etsy.',
-    url: 'https://YOUR_ETSY_AFFILIATE_LINK'
+    title: 'Trending Handmade Gifts',
+    desc: 'Popular Etsy handmade products and TikTok trending items.',
+    url: 'https://www.etsy.com/market/trending_items'
   }
 ];
 
-// ALIEXPRESS DEALS
+
+// ==========================
+// ALIEXPRESS HOT PRODUCTS
+// ==========================
 export const aliDeals = [
   {
-    title: 'AliExpress Hot Products',
-    desc: 'High-demand viral products with strong markup potential.',
-    url: 'https://YOUR_ALIEXPRESS_AFFILIATE_LINK'
+    title: 'AliExpress Hot & Viral Items',
+    desc: 'Low-cost viral products perfect for side hustles.',
+    url: 'https://www.aliexpress.us/w/wholesale-trending-products.html'
   }
 ];
 
-// MASTER MIXED LIST (Option A — EVERYTHING EVERYWHERE)
+
+// ==========================
+// MASTER MIX — EVERYTHING TOGETHER
+// ==========================
 export const allMixedDeals = [
-  ...amazonDeals,
   ...clickbankDeals,
-  ...fiverrDeals,
   ...cpaOffers,
+  ...fiverrDeals,
+  ...amazonDeals,
   ...etsyDeals,
   ...aliDeals
 ];
+
