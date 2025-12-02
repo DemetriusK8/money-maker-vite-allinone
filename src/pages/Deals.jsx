@@ -1,19 +1,7 @@
 import React from 'react';
 import OfferGrid from '../components/OfferGrid';
 import AdSensePanel from '../components/AdSensePanel';
-
-const items = [
-  { 
-    title: 'Amazon Daily Deals', 
-    desc: 'Add your affiliate links for Amazon products', 
-    url: 'https://amazon.com' 
-  },
-  { 
-    title: 'Best Buy Deals', 
-    desc: 'Electronics referral offers', 
-    url: 'https://bestbuy.com' 
-  }
-];
+import { allMixedDeals } from '../data/allDeals';
 
 export default function Deals() {
   return (
@@ -24,18 +12,18 @@ export default function Deals() {
         <AdSensePanel slot="3333333333" />
       </div>
 
-      {/* MAIN CONTENT */}
-      <OfferGrid title="Affiliate Deals" items={items} />
+      {/* ALL DEALS FROM ALL NETWORKS */}
+      <OfferGrid title="Affiliate Deals from All Networks" items={allMixedDeals} />
 
       {/* MID CONTENT AD */}
       <div className="my-10 flex justify-center">
         <AdSensePanel slot="4444444444" />
       </div>
 
-      {/* EXTRA CONTENT / SEO TEXT */}
       <p className="text-gray-600 mt-6 mb-6">
-        These are sample affiliate deal entries. Replace them with real money-making offers, 
-        referral links, and promotions from Amazon, BestBuy, and other platforms you manage.
+        This page displays mixed affiliate offers, combining Amazon, ClickBank, Fiverr, CPA networks,
+        Etsy, AliExpress, and more. Replace the URLs in <code>src/data/allDeals.js</code> with your own
+        affiliate tracking links to start earning commissions.
       </p>
 
       {/* BOTTOM AD */}
