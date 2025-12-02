@@ -1,0 +1,85 @@
+// src/data/allDeals.js
+
+// AMAZON DEALS
+export const amazonDeals = [
+  {
+    title: 'Amazon Gadgets',
+    desc: 'Hot tech & gadgets from Amazon — great for affiliate commissions.',
+    url: 'https://www.amazon.com/?tag=YOUR_AMAZON_TAG'
+  },
+  {
+    title: 'Home Essentials',
+    desc: 'Popular home products perfect for Amazon affiliate links.',
+    url: 'https://www.amazon.com/?tag=YOUR_AMAZON_TAG'
+  }
+];
+
+// CLICKBANK OFFERS
+export const clickbankDeals = [
+  {
+    title: 'ClickBank Fitness Offer',
+    desc: 'High-ticket fitness & weight-loss funnel with strong conversions.',
+    url: 'https://YOUR_CLICKBANK_HOPLINK'
+  },
+  {
+    title: 'Digital Marketing Course',
+    desc: 'Evergreen make-money-online product with great commissions.',
+    url: 'https://YOUR_CLICKBANK_HOPLINK'
+  }
+];
+
+// FIVERR OFFERS
+export const fiverrDeals = [
+  {
+    title: 'Logo Designer Referral',
+    desc: 'Earn commissions referring people to Fiverr logo designers.',
+    url: 'https://YOUR_FIVERR_AFFILIATE_LINK'
+  },
+  {
+    title: 'Freelance Web Developer',
+    desc: 'Refer clients to freelancers and earn per signup.',
+    url: 'https://YOUR_FIVERR_AFFILIATE_LINK'
+  }
+];
+
+// CPA NETWORK OFFERS
+export const cpaOffers = [
+  {
+    title: 'CPA Survey Offer',
+    desc: 'Simple email-submit offer from your CPA network.',
+    url: 'https://YOUR_CPA_LINK'
+  },
+  {
+    title: 'Finance Trial',
+    desc: 'High-payout finance CPA offer — great commissions.',
+    url: 'https://YOUR_CPA_LINK'
+  }
+];
+
+// ETSY AFFILIATE DEALS
+export const etsyDeals = [
+  {
+    title: 'Etsy Trending Gifts',
+    desc: 'Handmade trending items from Etsy.',
+    url: 'https://YOUR_ETSY_AFFILIATE_LINK'
+  }
+];
+
+// ALIEXPRESS DEALS
+export const aliDeals = [
+  {
+    title: 'AliExpress Hot Products',
+    desc: 'High-demand viral products with strong markup potential.',
+    url: 'https://YOUR_ALIEXPRESS_AFFILIATE_LINK'
+  }
+];
+
+// MASTER MIXED LIST (Option A — EVERYTHING EVERYWHERE)
+export const allMixedDeals = [
+  ...amazonDeals,
+  ...clickbankDeals,
+  ...fiverrDeals,
+  ...cpaOffers,
+  ...etsyDeals,
+  ...aliDeals
+];
