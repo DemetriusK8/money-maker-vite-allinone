@@ -2,18 +2,16 @@ import React, { useEffect, useState } from 'react';
 import OfferGrid from '../components/OfferGrid';
 import AdSensePanel from '../components/AdSensePanel';
 import axios from 'axios';
+import { allMixedDeals } from '../data/allDeals';
 
 export default function AutoDeals() {
-  const [deals, setDeals] = useState([]);
+
+  const [autoDeals, setAutoDeals] = useState([]);
 
   useEffect(() => {
-
     const fetchDeals = async () => {
       try {
-        // Public placeholder API — replace with your real affiliate feed later
         const res = await axios.get('https://api.publicapis.org/entries');
-
-        // Transform entries into offer cards
         const sample = (res.data.entries || [])
           .slice(0, 6)
           .map((e, i) => ({
@@ -22,43 +20,40 @@ export default function AutoDeals() {
             url: e.Link || 'https://example.com'
           }));
 
-        setDeals(sample);
+        setAutoDeals(sample);
 
-      } catch (e) {
-        console.warn('fetch deals error:', e);
+      } catch (err) {
+        console.warn('Auto deals API error:', err);
       }
     };
 
     fetchDeals();
-
-    // Re-fetch every 15 minutes
     const id = setInterval(fetchDeals, 1000 * 60 * 15);
     return () => clearInterval(id);
-
   }, []);
+
+  // Combine auto-fetch + affiliate list
+  const combined = [...autoDeals, ...allMixedDeals];
 
   return (
     <div className="max-w-5xl mx-auto">
 
-      {/* TOP INLINE AD */}
+      {/* TOP AD */}
       <div className="my-6 flex justify-center">
         <AdSensePanel slot="1414141414" />
       </div>
 
-      {/* AUTO-UPDATING DEAL GRID */}
-      <OfferGrid title="Auto-Updating Affiliate Deals" items={deals} />
+      {/* AUTO + AFFILIATE DEALS */}
+      <OfferGrid title="Auto-Updating Deals + Affiliate Offers" items={combined} />
 
-      {/* MID CONTENT AD */}
+      {/* MID AD */}
       <div className="my-10 flex justify-center">
         <AdSensePanel slot="1515151515" />
       </div>
 
-      {/* SEO + APPROVAL CONTENT */}
       <p className="text-gray-600 mt-6 mb-6">
-        These deals are automatically updated using a live API feed. You can replace this 
-        sample data with a real affiliate feed, RSS import, or private partner API to generate 
-        passive income from constantly refreshed offers. Frequent updates improve both user 
-        engagement and search visibility.
+        This page includes automatically updated offers and mixed affiliate deals. Replace URLs
+        inside <code>src/data/allDeals.js</code> with your real affiliate URLs.
       </p>
 
       {/* BOTTOM AD */}
@@ -69,4 +64,3 @@ export default function AutoDeals() {
     </div>
   );
 }
-
