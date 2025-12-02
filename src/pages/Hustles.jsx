@@ -1,19 +1,7 @@
 import React from 'react';
 import OfferGrid from '../components/OfferGrid';
 import AdSensePanel from '../components/AdSensePanel';
-
-const items = [
-  { 
-    title: 'Fiverr Referrals', 
-    desc: 'Refer clients & freelancers', 
-    url: 'https://fiverr.com' 
-  },
-  { 
-    title: 'UserTesting', 
-    desc: 'Get paid for testing websites/apps', 
-    url: 'https://usertesting.com' 
-  }
-];
+import { allMixedDeals } from '../data/allDeals';
 
 export default function Hustles() {
   return (
@@ -24,20 +12,17 @@ export default function Hustles() {
         <AdSensePanel slot="1010101010" />
       </div>
 
-      {/* MAIN CONTENT GRID */}
-      <OfferGrid title="Side Hustles" items={items} />
+      {/* MIXED HUSTLES & OFFERS */}
+      <OfferGrid title="Side Hustles & Affiliate Opportunities" items={allMixedDeals} />
 
-      {/* MID CONTENT AD */}
+      {/* MID AD */}
       <div className="my-10 flex justify-center">
         <AdSensePanel slot="1212121212" />
       </div>
 
-      {/* SEO TEXT FOR APPROVAL + VALUE */}
       <p className="text-gray-600 mt-6 mb-6">
-        These are high-earning, proven side hustles that work for beginners and experienced
-        freelancers alike. Add your own referral links, affiliate offers, or custom landing
-        pages to start generating passive income from trusted platforms like Fiverr and 
-        UserTesting.
+        This section combines profitable side hustles and affiliate offers. Add your referral, CPA,
+        or affiliate links to <code>src/data/allDeals.js</code> to start generating income.
       </p>
 
       {/* BOTTOM AD */}
