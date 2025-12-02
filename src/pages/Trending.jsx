@@ -1,19 +1,7 @@
 import React from 'react';
 import OfferGrid from '../components/OfferGrid';
 import AdSensePanel from '../components/AdSensePanel';
-
-const items = [
-  { 
-    title: 'TikTok Viral Products', 
-    desc: 'Promote viral finds with affiliate links', 
-    url: 'https://amazon.com' 
-  },
-  { 
-    title: 'Etsy Trending', 
-    desc: 'Handmade & unique product referrals', 
-    url: 'https://etsy.com' 
-  }
-];
+import { allMixedDeals } from '../data/allDeals';
 
 export default function Trending() {
   return (
@@ -24,19 +12,18 @@ export default function Trending() {
         <AdSensePanel slot="6666666666" />
       </div>
 
-      {/* MAIN CONTENT GRID */}
-      <OfferGrid title="Trending Now" items={items} />
+      {/* MIXED AFFILIATE DEALS */}
+      <OfferGrid title="Trending Offers Across All Networks" items={allMixedDeals} />
 
-      {/* MID CONTENT AD */}
+      {/* MID AD */}
       <div className="my-10 flex justify-center">
         <AdSensePanel slot="7777777777" />
       </div>
 
-      {/* SEO TEXT FOR ADSENSE APPROVAL */}
       <p className="text-gray-600 mt-6 mb-6">
-        These trending items are curated from platforms like TikTok and Etsy.
-        Add your own affiliate URLs to earn commissions from viral products,
-        trending crafts, and fast-moving online niches.
+        These trending offers include viral, popular, and high-earning affiliate opportunities
+        from multiple networks. Update your affiliate links inside 
+        <code>src/data/allDeals.js</code>.
       </p>
 
       {/* BOTTOM AD */}
@@ -47,3 +34,4 @@ export default function Trending() {
     </div>
   );
 }
+
