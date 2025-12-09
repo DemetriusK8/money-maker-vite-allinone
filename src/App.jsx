@@ -1,3 +1,4 @@
+import BottomNav from './components/BottomNav';
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/hustles" element={<Hustles />} />
           <Route path="/auto" element={<AutoDeals />} />
         </Routes>
+        <BottomNav />
       </div>
 
       {/* Ad Panel Insert */}
