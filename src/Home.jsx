@@ -1,20 +1,35 @@
-export default function Home() {
+import { allMixedDeals } from '../data/allDeals';
+
+export default function Deals() {
   return (
-    <main className="flex flex-col items-center text-center px-6 py-16 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
-        Start Earning Today
+    <main className="max-w-6xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        🔥 Hottest Money Maker Deals 🔥
       </h1>
 
-      <p className="max-w-2xl text-lg text-gray-600 mb-16">
-        Use affiliate links, referrals, and AdSense to monetize traffic.
-        This Vite + Tailwind starter is optimized for fast builds and deployment.
-      </p>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {allMixedDeals.map((deal, index) => (
+          <a
+            key={index}
+            href={deal.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6 border hover:border-indigo-500"
+          >
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              {deal.title}
+            </h2>
 
-      <p className="max-w-3xl text-xl text-gray-700 leading-relaxed">
-        Explore the best money-making opportunities curated to help you earn fast.
-        Whether you're launching a side hustle or optimizing affiliate income,
-        this platform gives you the tools you need to succeed.
-      </p>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              {deal.desc}
+            </p>
+
+            <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-md">
+              View Deal →
+            </span>
+          </a>
+        ))}
+      </div>
     </main>
   );
 }
