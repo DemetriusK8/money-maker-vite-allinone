@@ -1,36 +1,50 @@
-import React from 'react';
-import OfferGrid from '../components/OfferGrid';
-import AdSensePanel from '../components/AdSensePanel';
+// src/pages/Deals.jsx
 import { allMixedDeals } from '../data/allDeals';
 
 export default function Deals() {
   return (
-    <div className="max-w-5xl mx-auto">
+    <main className="max-w-6xl mx-auto px-4 py-12">
+      
+      <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-12">
+        🔥 Money Maker Deals
+      </h1>
 
-      {/* TOP INLINE AD */}
-      <div className="my-6 flex justify-center">
-        <AdSensePanel slot="3333333333" />
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {allMixedDeals.map((deal, index) => (
+          <a
+            key={index}
+            href={deal.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-5 border border-gray-100 hover:border-[#C8A951]"
+          >
+            {/* IMAGE */}
+            {deal.image && (
+              <img
+                src={deal.image}
+                alt={deal.title}
+                className="rounded-lg w-full h-44 object-cover mb-4"
+              />
+            )}
+
+            {/* TITLE */}
+            <h2 className="text-xl font-bold text-gray-900 mb-2">
+              {deal.title}
+            </h2>
+
+            {/* DESCRIPTION */}
+            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              {deal.desc}
+            </p>
+
+            {/* CTA */}
+            <span className="inline-block bg-[#FFD700] hover:bg-[#C8A951] text-gray-900 font-semibold px-4 py-2 rounded-md shadow-md transition">
+              👉 View Deal
+            </span>
+          </a>
+        ))}
       </div>
 
-      {/* ALL DEALS FROM ALL NETWORKS */}
-      <OfferGrid title="Affiliate Deals from All Networks" items={allMixedDeals} />
-
-      {/* MID CONTENT AD */}
-      <div className="my-10 flex justify-center">
-        <AdSensePanel slot="4444444444" />
-      </div>
-
-      <p className="text-gray-600 mt-6 mb-6">
-        This page displays mixed affiliate offers, combining Amazon, ClickBank, Fiverr, CPA networks,
-        Etsy, AliExpress, and more. Replace the URLs in <code>src/data/allDeals.js</code> with your own
-        affiliate tracking links to start earning commissions.
-      </p>
-
-      {/* BOTTOM AD */}
-      <div className="my-8 flex justify-center">
-        <AdSensePanel slot="5555555555" />
-      </div>
-
-    </div>
+    </main>
   );
 }
