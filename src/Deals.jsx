@@ -1,20 +1,20 @@
-import allDeals from '../data/allDeals';
+import { allMixedDeals } from '../data/allDeals';
 
 export default function Deals() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-10">
-        Hot Affiliate Deals 🔥
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">
+        🔥 Hottest Money Maker Deals 🔥
       </h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {allDeals.map((deal, index) => (
+        {allMixedDeals.map((deal, index) => (
           <a
             key={index}
             href={deal.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-5 border border-transparent hover:border-indigo-500"
+            className="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6 border hover:border-indigo-500"
           >
             <h2 className="text-xl font-semibold text-gray-800 mb-2">
               {deal.title}
@@ -25,7 +25,7 @@ export default function Deals() {
             </p>
 
             <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-md">
-              Learn More →
+              View Deal →
             </span>
           </a>
         ))}
