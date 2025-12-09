@@ -1,37 +1,31 @@
-import React from 'react';
-import OfferGrid from '../components/OfferGrid';
-import AdSensePanel from '../components/AdSensePanel';
 import { allMixedDeals } from '../data/allDeals';
 
 export default function Trending() {
+  const trending = allMixedDeals.slice(0, 6);
+
   return (
-    <div className="max-w-5xl mx-auto">
+    <main className="max-w-6xl mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">
+        🚀 Trending Opportunities
+      </h1>
 
-      {/* TOP INLINE AD */}
-      <div className="my-6 flex justify-center">
-        <AdSensePanel slot="6666666666" />
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {trending.map((item, idx) => (
+          <a
+            key={idx}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white shadow rounded-lg border hover:shadow-xl transition p-6 hover:border-indigo-500"
+          >
+            <h2 className="text-lg font-semibold text-gray-900">{item.title}</h2>
+            <p className="text-gray-600 text-sm mt-2 mb-4">{item.desc}</p>
+            <span className="text-indigo-600 font-medium hover:underline">
+              View Deal →
+            </span>
+          </a>
+        ))}
       </div>
-
-      {/* MIXED AFFILIATE DEALS */}
-      <OfferGrid title="Trending Offers Across All Networks" items={allMixedDeals} />
-
-      {/* MID AD */}
-      <div className="my-10 flex justify-center">
-        <AdSensePanel slot="7777777777" />
-      </div>
-
-      <p className="text-gray-600 mt-6 mb-6">
-        These trending offers include viral, popular, and high-earning affiliate opportunities
-        from multiple networks. Update your affiliate links inside 
-        <code>src/data/allDeals.js</code>.
-      </p>
-
-      {/* BOTTOM AD */}
-      <div className="my-8 flex justify-center">
-        <AdSensePanel slot="8888888888" />
-      </div>
-
-    </div>
+    </main>
   );
 }
-
