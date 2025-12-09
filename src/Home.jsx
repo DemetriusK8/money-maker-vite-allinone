@@ -1,35 +1,15 @@
-import { allMixedDeals } from '../data/allDeals';
+// src/pages/Home.jsx
+import { Link } from 'react-router-dom';
 
-export default function Deals() {
+export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">
-        🔥 Hottest Money Maker Deals 🔥
-      </h1>
+    <div className="flex flex-col">
+      
+      {/* HERO SECTION */}
+      <section className="text-center py-24 bg-gradient-to-br from-gray-900 via-black to-[#C8A951] text-white shadow-lg">
+        <h1 className="text-5xl font-extrabold mb-6 drop-shadow-md">
+          Make Money Online. Faster. 🚀
+        </h1>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {allMixedDeals.map((deal, index) => (
-          <a
-            key={index}
-            href={deal.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6 border hover:border-indigo-500"
-          >
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              {deal.title}
-            </h2>
-
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              {deal.desc}
-            </p>
-
-            <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-md">
-              View Deal →
-            </span>
-          </a>
-        ))}
-      </div>
-    </main>
-  );
-}
+        <p className="text-lg max-w-2xl mx-auto opacity-90 mb-10 font-light">
+          The smartest
