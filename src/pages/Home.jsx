@@ -8,8 +8,8 @@ export default function Home() {
       </h1>
 
       <p className="text-base md:text-lg max-w-2xl mx-auto opacity-90 mb-10">
-        Discover legit, hand-picked offers, side hustles, and viral products that turn your clicks 
-        into real income — even if you’re just getting started.
+        Discover legit, hand-picked offers, side hustles, and viral products 
+        that turn your clicks into real income — even if you’re just getting started.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
