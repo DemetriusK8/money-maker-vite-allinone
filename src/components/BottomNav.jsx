@@ -1,36 +1,59 @@
 // src/components/BottomNav.jsx
-import { NavLink } from "react-router-dom";
-import { Home, Flame, Briefcase, Settings, BadgeDollarSign } from "lucide-react";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+const linkBase =
+  'flex flex-col items-center justify-center text-xs font-medium';
 
 export default function BottomNav() {
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-black text-white shadow-2xl border-t border-gray-700 z-50 flex justify-around py-3 md:hidden">
-      
-      <NavLink to="/" className="flex flex-col items-center hover:text-[#FFD700]">
-        <Home size={22} />
-        <span className="text-xs mt-1">Home</span>
-      </NavLink>
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 border-t border-gray-200 shadow-sm sm:hidden">
+      <div className="max-w-3xl mx-auto flex justify-between px-4 py-2">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `${linkBase} ${isActive ? 'text-indigo-600' : 'text-gray-500'}`
+          }
+        >
+          <span>Home</span>
+        </NavLink>
 
-      <NavLink to="/deals" className="flex flex-col items-center hover:text-[#FFD700]">
-        <BadgeDollarSign size={22} />
-        <span className="text-xs mt-1">Deals</span>
-      </NavLink>
+        <NavLink
+          to="/deals"
+          className={({ isActive }) =>
+            `${linkBase} ${isActive ? 'text-indigo-600' : 'text-gray-500'}`
+          }
+        >
+          <span>Deals</span>
+        </NavLink>
 
-      <NavLink to="/trending" className="flex flex-col items-center hover:text-[#FFD700]">
-        <Flame size={22} />
-        <span className="text-xs mt-1">Trending</span>
-      </NavLink>
+        <NavLink
+          to="/trending"
+          className={({ isActive }) =>
+            `${linkBase} ${isActive ? 'text-indigo-600' : 'text-gray-500'}`
+          }
+        >
+          <span>Trending</span>
+        </NavLink>
 
-      <NavLink to="/hustles" className="flex flex-col items-center hover:text-[#FFD700]">
-        <Briefcase size={22} />
-        <span className="text-xs mt-1">Hustles</span>
-      </NavLink>
+        <NavLink
+          to="/hustles"
+          className={({ isActive }) =>
+            `${linkBase} ${isActive ? 'text-indigo-600' : 'text-gray-500'}`
+          }
+        >
+          <span>Hustles</span>
+        </NavLink>
 
-      <NavLink to="/auto" className="flex flex-col items-center hover:text-[#FFD700]">
-        <Settings size={22} />
-        <span className="text-xs mt-1">Auto</span>
-      </NavLink>
-
+        <NavLink
+          to="/auto"
+          className={({ isActive }) =>
+            `${linkBase} ${isActive ? 'text-indigo-600' : 'text-gray-500'}`
+          }
+        >
+          <span>Auto-Deals</span>
+        </NavLink>
+      </div>
     </nav>
   );
 }
