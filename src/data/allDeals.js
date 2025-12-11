@@ -1,11 +1,5 @@
-// ==========================
-// CLICKBANK HIGH-TICKET DEALS
-// ==========================
-export const clickbankDeals = [
-  {
-    title: 'The Smoothie Diet – Best Weight Loss Plan',
-    desc: 'Top-performing ClickBank offer with HUGE conversions for women 25–55.',
-    url: 'https://hop.clickbank.net/?affiliate=YOURID&vendor=smoothd1&pid=frontpage'
-  },
-  {
-    title: '
+{
+  title: "Ikaria Juice — Hot Weight Loss Offer",
+  desc: "Top trending ClickBank supplement with strong conversions and a $100+ payout.",
+  url: "https://7479dis3w94lek25hi7hh-6pef.hop.clickbank.net"
+}
