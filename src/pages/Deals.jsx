@@ -1,37 +1,28 @@
-// src/pages/Deals.jsx
 import React from "react";
-import { allMixedDeals } from "../data/allDeals";
+import { allDeals } from "../data/allDeals";
 
-export default function Deals() {
+const Deals = () => {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-12">
-        🔥 Money Maker Deals 🔥
-      </h1>
+    <div className="p-6 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center">🔥 Hot Deals</h1>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {allMixedDeals.map((deal, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {allDeals.map((deal, index) => (
           <a
             key={index}
-            href={deal.url}
+            href={deal.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-white shadow-md hover:shadow-xl transition rounded-lg p-6 border hover:border-indigo-500"
+            className="border rounded-lg shadow p-4 hover:bg-gray-100 transition"
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              {deal.title}
-            </h2>
-
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
-              {deal.desc}
-            </p>
-
-            <span className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-md">
-              View Deal →
-            </span>
+            <h2 className="text-xl font-semibold mb-2">{deal.title}</h2>
+            <p className="text-gray-700 mb-4">{deal.description}</p>
+            <span className="text-blue-600 font-bold">Get Deal →</span>
           </a>
         ))}
       </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Deals;
