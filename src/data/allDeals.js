@@ -1,3 +1,5 @@
+// src/data/allDeals.js
+
 // 🔥 MAIN CLICKBANK OFFERS
 export const mainOffers = [
   {
