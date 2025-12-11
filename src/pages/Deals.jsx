@@ -1,6 +1,6 @@
 // src/pages/Deals.jsx
 import React from "react";
-import { mainOffers } from "../data/allDeals";
+import { mainOffers } from "../../data/allDeals.js";
 
 const Deals = () => {
   return (
