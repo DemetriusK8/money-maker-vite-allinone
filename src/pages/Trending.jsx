@@ -1,31 +1,45 @@
-import { allMixedDeals } from '../data/allDeals';
+// src/pages/Trending.jsx
+import React from 'react';
+import { trendingDeals } from '../data/allDeals';
 
 export default function Trending() {
-  const trending = allMixedDeals.slice(0, 6);
-
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-gray-800 text-center mb-12">
-        🚀 Trending Opportunities
-      </h1>
+    <main className="max-w-6xl mx-auto px-4 py-10 pb-24">
+      <header className="mb-8 text-center">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          📈 Trending Right Now
+        </h1>
+        <p className="text-gray-600">
+          Offers with strong gravity, hype, or buzz right now. Great for social,
+          content, and email traffic.
+        </p>
+      </header>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {trending.map((item, idx) => (
-          <a
-            key={idx}
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white shadow rounded-lg border hover:shadow-xl transition p-6 hover:border-indigo-500"
-          >
-            <h2 className="text-lg font-semibold text-gray-900">{item.title}</h2>
-            <p className="text-gray-600 text-sm mt-2 mb-4">{item.desc}</p>
-            <span className="text-indigo-600 font-medium hover:underline">
-              View Deal →
-            </span>
-          </a>
+        {trendingDeals.map((offer) => (
+          <TrendingCard key={offer.id} offer={offer} />
         ))}
       </div>
     </main>
+  );
+}
+
+function TrendingCard({ offer }) {
+  return (
+    <a
+      href={offer.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:border-indigo-200 transition"
+    >
+      <h2 className="text-lg font-bold text-gray-900 mb-1">{offer.title}</h2>
+      <p className="text-sm text-gray-600 mb-3">{offer.desc}</p>
+      <p className="text-xs text-gray-500 mb-2">
+        Network: {offer.network} • Badge: {offer.badge}
+      </p>
+      <span className="inline-flex items-center text-sm font-semibold text-indigo-600">
+        Promote This &rarr;
+      </span>
+    </a>
   );
 }
