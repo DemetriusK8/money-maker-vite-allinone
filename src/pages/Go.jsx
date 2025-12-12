@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { mainOffers } from "../data/allDeals";
+import { allMixedDeals } from "../data/allDeals.js";
 
 // Build quick lookup table: id → url
 const idToUrl = {};
