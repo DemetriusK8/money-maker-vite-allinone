@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import { Link } from 'react-router-dom';
-
+import { mainOffers } from "../data/allDeals";
 export default function Home() {
   return (
     <div className="flex flex-col">
