@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LeadMagnet from '../components/LeadMagnet';
-import { mainOffers } from '../data/allDeals';
+import { mainOffers } from "../data/allDeals.js";
 
 export default function Home() {
   const topOffer = mainOffers[0]; // Ikaria
