@@ -1,8 +1,6 @@
 // src/pages/Hustles.jsx
-import React from 'react';
-import { hustleOffers } from "../data/allDeals.js";
-
-const combined = [...hustleIdeas, ...cpaOffers];
+import React from "react";
+import { hustleIdeas } from "../data/allDeals";
 
 export default function Hustles() {
   return (
