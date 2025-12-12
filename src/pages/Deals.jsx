@@ -21,7 +21,7 @@ const Deals = () => {
             </p>
 
             <a
-              href={offer.url}
+             href={`/go/${offer.id}`}
               target="_blank"
               className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
             >
