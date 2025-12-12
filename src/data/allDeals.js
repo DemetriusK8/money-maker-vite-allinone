@@ -1,11 +1,9 @@
-// src/data/allDeals.js
-
-// 🔥 MAIN CLICKBANK OFFERS
+// MAIN CLICKBANK OFFERS
 export const mainOffers = [
   {
     id: 'ikaria',
     title: 'Ikaria Lean Belly Juice',
-    desc: 'Powerful exotic nutrients that target stubborn belly fat and support healthy weight loss.',
+    desc: 'Powerful exotic nutrients that target stubborn belly fat.',
     network: 'ClickBank',
     badge: '#1 Fat Loss Pick',
     payout: '$133+ avg/sale',
@@ -13,8 +11,8 @@ export const mainOffers = [
   },
   {
     id: 'smoothie',
-    title: 'The Smoothie Diet – 21-Day Rapid Weight Loss Program',
-    desc: 'Done-for-you fat-burning smoothie plans that help users lose weight fast.',
+    title: 'The Smoothie Diet',
+    desc: 'Rapid 21-day fat loss program.',
     network: 'ClickBank',
     badge: 'Evergreen',
     payout: '$25–$40 per sale',
@@ -23,10 +21,13 @@ export const mainOffers = [
   {
     id: 'leanbiome',
     title: 'LeanBiome – Gut Health Weight Loss',
-    desc: 'Unique “lean bacteria” blend that targets stubborn fat through gut health.',
+    desc: 'Lean bacteria blend targeting stubborn fat.',
     network: 'ClickBank',
     badge: 'High Gravity',
     payout: '$100+ per sale',
     url: 'https://2ea6abo78zaq3v6glzwyrlt54g.hop.clickbank.net'
   }
 ];
+
+// MERGED LIST for Go.jsx
+export const allMixedDeals = [...mainOffers];
