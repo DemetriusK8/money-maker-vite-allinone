@@ -1,29 +1,32 @@
 // src/pages/Go.jsx
+
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { mainOffers } from "../.. /data/allDeals";
+import { mainOffers } from "../../data/allDeals";
 
-// Build slug → url lookup
-const slugToUrl = {};
+// Build quick lookup table: id → url
+const idToUrl = {};
 mainOffers.forEach((deal) => {
-  if (deal.slug) {
-    slugToUrl[deal.slug] = deal.url;
+  if (deal.id) {
+    idToUrl[deal.id] = deal.url;
   }
 });
 
 export default function Go() {
-  const { slug } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const target = slugToUrl[slug];
+    const targetUrl = idToUrl[id];
 
-    if (target) {
-      window.location.href = target;
+    if (targetUrl) {
+      // Redirect to the affiliate link
+      window.location.href = targetUrl;
     } else {
+      // If no match → send user back to Deals page
       navigate("/deals");
     }
-  }, [slug, navigate]);
+  }, [id, navigate]);
 
   return (
     <div className="p-10 text-center text-xl">
