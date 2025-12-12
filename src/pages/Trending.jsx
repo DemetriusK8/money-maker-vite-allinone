@@ -1,6 +1,6 @@
 // src/pages/Trending.jsx
 import React from 'react';
-import { trendingDeals } from '../data/allDeals';
+import { trendingOffers } from "../data/allDeals.js";
 
 export default function Trending() {
   return (
