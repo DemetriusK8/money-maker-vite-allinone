@@ -1,6 +1,6 @@
 // src/pages/AutoDeals.jsx
 import React from 'react';
-import { autoDeals } from '../data/allDeals';
+import { mainOffers } from "../data/allDeals.js";
 
 export default function AutoDeals() {
   return (
