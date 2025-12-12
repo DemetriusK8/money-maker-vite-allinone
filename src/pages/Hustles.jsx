@@ -15,14 +15,22 @@ export default function Hustles() {
         </p>
       </header>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {combined.map((idea) => (
-          <HustleCard key={idea.id} idea={idea} />
-        ))}
-      </div>
-    </main>
-  );
-}
+ <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {hustleIdeas.map((hustle) => (
+    <div
+      key={hustle.id}
+      className="bg-white p-5 rounded-xl shadow"
+    >
+      <h2 className="text-xl font-semibold mb-2">
+        {hustle.title}
+      </h2>
+      <p className="text-gray-600">
+        {hustle.desc}
+      </p>
+    </div>
+  ))}
+</div>
+
 
 function HustleCard({ idea }) {
   return (
