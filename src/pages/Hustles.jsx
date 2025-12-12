@@ -1,6 +1,6 @@
 // src/pages/Hustles.jsx
 import React from 'react';
-import { hustleIdeas, cpaOffers } from '../data/allDeals';
+import { hustleOffers } from "../data/allDeals.js";
 
 const combined = [...hustleIdeas, ...cpaOffers];
 
