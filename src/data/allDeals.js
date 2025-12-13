@@ -1,40 +1,52 @@
 // src/data/allDeals.js
 
-export const trendingOffers = [
+// 🔥 MAIN OFFERS
+export const mainOffers = [
   {
     id: "ikaria",
     title: "Ikaria Lean Belly Juice",
-    desc: "Exotic nutrients targeting stubborn belly fat.",
-    url: "https://7479dis3w94lek25hi7hh-6pef.hop.clickbank.net",
+    desc: "Exotic nutrients that target stubborn belly fat.",
     network: "ClickBank",
-    payout: "$133+/sale"
+    payout: "$133+ per sale",
+    url: "https://7479dis3w94lek25hi7hh-6pef.hop.clickbank.net",
   },
   {
     id: "smoothie",
     title: "The Smoothie Diet",
-    desc: "21-day rapid weight loss smoothie program.",
-    url: "https://8f2fc614y6cncx5hrj3pr0pb31.hop.clickbank.net",
+    desc: "21-day fat-burning smoothie system.",
     network: "ClickBank",
-    payout: "$25–$40/sale"
-  }
+    payout: "$25–$40 per sale",
+    url: "https://8f2fc614y6cncx5hrj3pr0pb31.hop.clickbank.net",
+  },
 ];
 
+// 🔥 TRENDING OFFERS
+export const trendingOffers = [...mainOffers];
+
+// 🔥 SIDE HUSTLES
+export const hustleIdeas = [
+  {
+    id: "tiktok",
+    title: "TikTok Faceless Videos",
+    desc: "Create viral clips without showing your face.",
+    url: "/go/smoothie",
+  },
+];
+
+// 🔥 AUTO DEALS
 export const autoDeals = [
   {
     id: "dashcam",
-    title: "4K Smart Dash Cam",
-    desc: "High-demand car gadget with viral appeal.",
-    url: "#",
-    network: "Amazon",
-    payout: "Varies"
-  }
+    title: "Car Dash Cam",
+    desc: "High-demand safety gadget.",
+    url: "/go/ikaria",
+  },
 ];
 
-export const hustleIdeas = [
-  {
-    id: "ugc",
-    title: "UGC Content for Brands",
-    desc: "Create short videos for brands without showing your face.",
-    url: "#"
-  }
+// 🔥 COMBINED (used by Go.jsx)
+export const allMixedDeals = [
+  ...mainOffers,
+  ...trendingOffers,
+  ...hustleIdeas,
+  ...autoDeals,
 ];
