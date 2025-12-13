@@ -1,36 +1,25 @@
-// src/pages/Deals.jsx
 import React from "react";
-import { trendingOffers } from "../data/allDeals";
-const Deals = () => {
-  return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">🔥 Top Partner Deals</h1>
+import { mainOffers } from "../data/allDeals";
 
-      <div className="grid grid-cols-1 gap-4">
-        trendingOffers.map((offer) => (
-          <div key={offer.id} className="bg-white p-4 rounded-xl shadow">
+export default function Deals() {
+  return (
+    <main className="p-6">
+      <h1 className="text-3xl font-bold mb-6">🔥 Deals</h1>
+
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {mainOffers.map((offer) => (
+          <a
+            key={offer.id}
+            href={offer.url}
+            target="_blank"
+            className="block p-4 bg-white rounded-xl shadow hover:shadow-lg"
+          >
             <h2 className="text-xl font-semibold">{offer.title}</h2>
             <p className="text-gray-600">{offer.desc}</p>
-
-            <p className="text-sm mt-2">
-              <strong>Network:</strong> {offer.network}
-            </p>
-            <p className="text-sm">
-              <strong>Payout:</strong> {offer.payout}
-            </p>
-
-            <a
-             href={`/go/${offer.id}`}
-              target="_blank"
-              className="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg"
-            >
-              View Offer
-            </a>
-          </div>
+            <p className="mt-2 text-sm font-bold">{offer.payout}</p>
+          </a>
         ))}
       </div>
-    </div>
+    </main>
   );
-};
-
-export default Deals;
+}
