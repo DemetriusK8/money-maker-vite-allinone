@@ -1,3 +1,7 @@
 export default function Deals() {
-  return <h1>Deals page works</h1>;
+  return (
+    <div style={{ padding: "40px", fontSize: "24px" }}>
+      DEALS PAGE FORCE RENDER
+    </div>
+  );
 }
