@@ -1,3 +1,3 @@
 export default function Hustles() {
-  return <h1>Hustles Page Works</h1>;
+  return <h1>Hustles page works</h1>;
 }
