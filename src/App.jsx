@@ -1,14 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
 import Deals from "./pages/Deals";
 import Trending from "./pages/Trending";
 import Hustles from "./pages/Hustles";
 import AutoDeals from "./pages/AutoDeals";
-
 import BottomNav from "./components/BottomNav";
 
-export default function App() {
+function App() {
   return (
     <>
       <Routes>
@@ -23,3 +21,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
