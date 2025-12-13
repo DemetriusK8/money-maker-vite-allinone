@@ -1,3 +1,3 @@
-export default function AutoDeals() {
-  return <h1>Auto Deals Page Works</h1>;
+export default function Hustles() {
+  return <h1>Hustles page works</h1>;
 }
