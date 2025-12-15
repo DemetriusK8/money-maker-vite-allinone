@@ -16,10 +16,11 @@ export default function App() {
         <Link to="/deals">Deals</Link>
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/deals" element={<Deals />} />
-      </Routes>
-    </div>
-  );
-}
+   <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/deals" element={<Deals />} />
+  <Route path="/trending" element={<h1>🔥 Trending Page</h1>} />
+  <Route path="/hustles" element={<h1>🚀 Hustles Page</h1>} />
+  <Route path="/auto-deals" element={<h1>🚗 Auto Deals Page</h1>} />
+</Routes>
+
