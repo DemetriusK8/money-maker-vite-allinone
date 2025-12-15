@@ -12,9 +12,13 @@ export default function App() {
   return (
     <div style={{ padding: 20 }}>
       <nav style={{ marginBottom: 20 }}>
-        <Link to="/" style={{ marginRight: 10 }}>Home</Link>
-        <Link to="/deals">Deals</Link>
-      </nav>
+  <Link to="/" style={{ marginRight: 10 }}>Home</Link>
+  <Link to="/deals" style={{ marginRight: 10 }}>Deals</Link>
+  <Link to="/trending" style={{ marginRight: 10 }}>Trending</Link>
+  <Link to="/hustles" style={{ marginRight: 10 }}>Hustles</Link>
+  <Link to="/auto-deals">Auto Deals</Link>
+</nav>
+
 
    <Routes>
   <Route path="/" element={<Home />} />
