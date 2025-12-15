@@ -1,8 +1,7 @@
 export default function App() {
   return (
-    <div style={{ padding: 40 }}>
-      <h1>🔥 APP IS RENDERING</h1>
-      <p>If you see this, React + Vite work.</p>
+    <div style={{ padding: "40px", fontSize: "24px" }}>
+      ✅ App is working
     </div>
   );
 }
