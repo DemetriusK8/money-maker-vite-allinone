@@ -1,8 +1,7 @@
 function App() {
   return (
-    <div style={{ padding: 40 }}>
-      <h1>Home Page Works</h1>
-      <p>If you see this, React is wired correctly.</p>
+    <div style={{ padding: "40px", fontSize: "24px" }}>
+      ✅ Money Maker App is running
     </div>
   );
 }
