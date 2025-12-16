@@ -1,22 +1,6 @@
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
-
-function Home() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Home Page</h1>
-      <p>Welcome to Money Maker 💰</p>
-    </div>
-  );
-}
-
-function Deals() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>Deals Page</h1>
-      <p>Affiliate deals will live here.</p>
-    </div>
-  );
-}
+import Home from "./pages/Home";
+import Deals from "./pages/Deals";
 
 function BottomNav() {
   return (
