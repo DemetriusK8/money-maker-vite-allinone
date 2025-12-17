@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Deals from "./pages/Deals";
-
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/deals" element={<Deals />} />
-    </Routes>
-  );
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Maker</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 
