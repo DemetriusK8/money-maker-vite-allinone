@@ -1,13 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Deals from "./pages/Deals";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { HashRouter } from "react-router-dom";
+import App from "./App";
 
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/deals" element={<Deals />} />
-    </Routes>
-  );
-}
-
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </React.StrictMode>
+);
