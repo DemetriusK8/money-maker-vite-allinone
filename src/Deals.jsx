@@ -1,3 +1,3 @@
 export default function Deals() {
-  return <h1>Deals page works</h1>;
+  return <h1>Deals Page</h1>;
 }
