@@ -1,5 +1,4 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
 import Deals from "./pages/Deals";
 import Trending from "./pages/Trending";
