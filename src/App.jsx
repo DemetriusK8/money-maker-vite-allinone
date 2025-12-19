@@ -8,6 +8,8 @@ import Hustles from "./pages/Hustles";
 export default function App() {
   return (
     <HashRouter>
+      <Nav />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/deals" element={<Deals />} />
