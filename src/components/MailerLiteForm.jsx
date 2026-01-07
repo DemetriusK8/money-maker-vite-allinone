@@ -2,20 +2,16 @@ import { useEffect } from "react";
 
 export default function MailerLiteForm() {
   useEffect(() => {
-    // Prevent duplicate script
-    if (!window.ml) {
+    if (window.ml) {
+      window.ml("account", "1993251");
+    } else {
       const script = document.createElement("script");
       script.src = "https://assets.mailerlite.com/js/universal.js";
       script.async = true;
-
       script.onload = () => {
         window.ml("account", "1993251");
-        window.ml("load"); // 👈 FORCE re-render
       };
-
-      document.head.appendChild(script);
-    } else {
-      window.ml("load"); // 👈 FORCE re-render if already loaded
+      document.body.appendChild(script);
     }
   }, []);
 
