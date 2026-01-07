@@ -100,7 +100,7 @@ export default function Home() {
     </main>
   );
 }
-
+<MailerLiteForm />
 function HomeCard({ to, title, desc }) {
   return (
     <Link
