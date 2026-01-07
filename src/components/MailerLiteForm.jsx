@@ -1,27 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function MailerLiteForm() {
+  const formRef = useRef(null);
+
   useEffect(() => {
-    if (window.ml) {
-      window.ml("account", "1993251");
-    } else {
+    const initMailerLite = () => {
+      if (window.ml && formRef.current) {
+        window.ml("account", "1993251");
+        window.ml("form", "NtFURj", formRef.current);
+      }
+    };
+
+    if (!document.getElementById("ml-universal")) {
       const script = document.createElement("script");
+      script.id = "ml-universal";
       script.src = "https://assets.mailerlite.com/js/universal.js";
       script.async = true;
-      script.onload = () => {
-        window.ml("account", "1993251");
-      };
+      script.onload = initMailerLite;
       document.body.appendChild(script);
+    } else {
+      initMailerLite();
     }
   }, []);
 
-  return (
-    <div style={{ marginTop: "2rem" }}>
-      <div
-        className="ml-embedded"
-        data-form="NtFURj"
-        style={{ minHeight: "200px" }}
-      ></div>
-    </div>
-  );
+  return <div ref={formRef}></div>;
 }
