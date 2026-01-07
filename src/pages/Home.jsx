@@ -100,6 +100,10 @@ export default function Home() {
     </main>
   );
 }
+<p style={{ color: "red", fontWeight: "bold" }}>
+  MAILERLITE COMPONENT SHOULD BE BELOW THIS
+</p>
+
 <MailerLiteForm />
 function HomeCard({ to, title, desc }) {
   return (
