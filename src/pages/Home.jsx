@@ -22,11 +22,12 @@ export default function Home() {
           the best ones in one place. Browse the deals, pick a hustle, and start
           building your next income stream.
         </p>
-<h2>Free Guide: 10 Ways to Make Your First $100 Online</h2>
+        <h2 style={{ marginTop: "40px" }}>
+  Free Guide: 10 Ways to Make Your First $100 Online
+</h2>
 
 <MailerLiteForm />
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/deals"
             className="px-8 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
