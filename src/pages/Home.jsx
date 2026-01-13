@@ -6,27 +6,29 @@ import { mainOffers } from "../data/allDeals";
 import MailerLiteForm from "../components/MailerLiteForm";
 export default function Home() {
   const topOffer = mainOffers[0]; // Ikaria
+return (
+  <main style={{ padding: "40px" }}>
+    <h1 style={{ color: "green" }}>
+      ✅ TEST: HOME PAGE IS RENDERING
+    </h1>
 
-  return (
-    <main className="max-w-6xl mx-auto px-4 py-12 pb-24">
-      {/* HERO */}
-      <section className="text-center mb-16">
-        <p className="text-indigo-600 font-semibold uppercase tracking-wide mb-2">
-          Money Maker Hub
-        </p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-          Start Earning Online <span className="text-indigo-600">Today</span>
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-          I test affiliate offers, side hustles, and tools for you — then list
-          the best ones in one place. Browse the deals, pick a hustle, and start
-          building your next income stream.
-        </p>
-        <h2 style={{ marginTop: "40px" }}>
-  Free Guide: 10 Ways to Make Your First $100 Online
-</h2>
+    <h2 style={{ marginTop: "40px" }}>
+      Free Guide: 10 Ways to Make Your First $100 Online
+    </h2>
 
-<MailerLiteForm />
+    <div
+      style={{
+        border: "3px dashed red",
+        padding: "20px",
+        marginTop: "20px",
+        fontWeight: "bold",
+      }}
+    >
+      FORM SHOULD APPEAR HERE
+    </div>
+  </main>
+);
+ <MailerLiteForm />
  <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/deals"
