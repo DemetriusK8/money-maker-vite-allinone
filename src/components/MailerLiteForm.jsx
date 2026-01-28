@@ -7,30 +7,19 @@ export default function MailerLiteForm() {
     script.async = true;
     document.body.appendChild(script);
 
-    script.onload = () => {
-      if (window.ml) {
-        window.ml("account", "1993251");
-      }
+    window.ml = window.ml || function () {
+      (window.ml.q = window.ml.q || []).push(arguments);
+    };
+
+    window.ml("account", "YOUR_ACCOUNT_ID");
+
+    return () => {
+      document.body.removeChild(script);
     };
   }, []);
 
-return (
-  <div
-    style={{
-      marginTop: "30px",
-      position: "relative",
-      zIndex: 9999,
-      pointerEvents: "auto"
-    }}
-  >
-    <div
-      className="ml-embedded"
-      data-form="NtFU9"
-      style={{
-        pointerEvents: "auto",
-        position: "relative",
-        zIndex: 9999
-      }}
-    ></div>
-  </div>
-);
+  return (
+    <div className="ml-embedded" data-form="NtFU9"></div>
+  );
+}
+
