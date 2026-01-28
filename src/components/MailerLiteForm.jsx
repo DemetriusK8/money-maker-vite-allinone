@@ -11,7 +11,7 @@ export default function MailerLiteForm() {
       (window.ml.q = window.ml.q || []).push(arguments);
     };
 
-    window.ml("account", "YOUR_ACCOUNT_ID");
+    window.ml("account", 2147483647);
 
     return () => {
       document.body.removeChild(script);
