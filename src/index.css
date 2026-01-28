@@ -9,3 +9,17 @@ html, body, #root {
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold;
 }
+/* 🔥 FORCE MAILERLITE FORM TO BE CLICKABLE */
+.ml-embedded,
+.ml-embedded * {
+  pointer-events: auto !important;
+  z-index: 2147483647 !important;
+  position: relative !important;
+}
+
+iframe[src*="mailerlite"],
+iframe[src*="ml"] {
+  pointer-events: auto !important;
+  z-index: 2147483647 !important;
+  position: relative !important;
+}
