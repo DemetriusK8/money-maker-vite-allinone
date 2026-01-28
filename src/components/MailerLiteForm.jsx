@@ -14,12 +14,23 @@ export default function MailerLiteForm() {
     };
   }, []);
 
-  return (
-    <div style={{ marginTop: "30px", position: "relative", zIndex: 999 }}>
-      <div
-        className="ml-embedded"
-        data-form="NtFU9"
-      ></div>
-    </div>
-  );
-}
+return (
+  <div
+    style={{
+      marginTop: "30px",
+      position: "relative",
+      zIndex: 9999,
+      pointerEvents: "auto"
+    }}
+  >
+    <div
+      className="ml-embedded"
+      data-form="NtFU9"
+      style={{
+        pointerEvents: "auto",
+        position: "relative",
+        zIndex: 9999
+      }}
+    ></div>
+  </div>
+);
